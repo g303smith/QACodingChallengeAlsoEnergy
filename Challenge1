@@ -1,0 +1,13 @@
+import requests #Requests is a great package for using http.
+
+
+url = "https://www.google.com/" #The domain name we are checking for.
+page = requests.get(url)        #Using the .get command from the requests package
+test = (page.status_code)       #If page.status_code returns 200, this means the 
+                                #server is up and the response is as to be expected
+
+if test==200:                   #simple for loop for talking to humans.
+    print("Google is up!")
+else:
+    print("Google is down.")
+            
